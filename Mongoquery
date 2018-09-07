@@ -1,0 +1,239 @@
+Subhras-MacBook-Pro:~ subhra$ mongo
+MongoDB shell version v4.0.1
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 4.0.1
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	http://docs.mongodb.org/
+Questions? Try the support group
+	http://groups.google.com/group/mongodb-user
+Server has startup warnings:
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server.
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> db
+test
+> show collections;
+> db.createCollection(
+Display all 175 possibilities? (y or n)
+Array(                       gc(
+BinData(                     getActiveCommands(
+Boolean(                     getBuildInfo(
+BulkWriteError(              getHostName(
+BulkWriteResult(             getMemInfo(
+CountDownLatch               getOwnPropertyDescriptor
+DBCommandCursor(             getOwnPropertyNames
+DBExplainQuery(              getPrototypeOf
+DBPointer(                   hasOwnProperty(
+Date(                        help(
+DriverSession(               hex_md5(
+ErrorCodeStrings             hostname(
+ErrorCodes                   indentStr(
+Explainable(                 interpreterVersion(
+Geo                          isExtensible
+HexData(                     isFinite(
+ISODate(                     isFrozen
+Infinity                     isMasterStatePrompt(
+JSON                         isNaN(
+MD5(                         isNetworkError(
+MR                           isNumber(
+Map(                         isObject(
+MapReduceResult(             isSealed
+Math                         isString(
+MaxKey                       jsTest
+MinKey                       jsTestLog(
+Mongo(                       jsTestName(
+MongoBridge(                 jsTestOptions(
+MongoRunner(                 keys
+NaN                          listFiles(
+Number(                      load(
+NumberDecimal(               ls(
+NumberInt(                   md5sumFile(
+NumberLong(                  mkdir(
+ObjectId(                    module
+PlanCache(                   myPort(
+Random                       null
+RegExp(                      parseFloat(
+ReplSetTest(                 parseInt(
+SessionOptions(              pathExists(
+ShardingTest(                preventExtensions
+String(                      print(
+TestData                     printShardingSizes(
+Timestamp(                   printShardingStatus(
+ToolTest(                    printStackTrace(
+UUID(                        printjson(
+WriteCommandError(           printjsononeline(
+WriteConcern(                propertyIsEnumerable(
+WriteError(                  prototype
+WriteResult(                 pwd(
+allocatePort(                rawMongoProgramOutput(
+allocatePorts(               reconnect(
+assert(                      removeFile(
+authutil                     replSetMemberStatePrompt(
+benchFinish(                 resetDbpath(
+benchRun(                    retryOnNetworkError(
+benchRunSync(                rs(
+benchStart(                  run(
+bsonsize(                    runMongoProgram(
+cat(                         runProgram(
+cd(                          seal
+chatty(                      setJsTestOption(
+checkProgram(                setVerboseShell(
+clearRawMongoProgramOutput(  sh(
+compare(                     shellAutocomplete(
+compareOn(                   shellHelper(
+computeSHA256Block(          shellPrint(
+connect(                     shellPrintHelper(
+constructor                  sortDoc(
+convertShardKeyToHashed(     startMongoProgram(
+copyDbpath(                  startMongoProgramNoConnect(
+copyFile(                    startParallelShell(
+create                       stopMongoProgramByPid(
+db                           testingReplication
+decodeURI(                   timestampCmp(
+decodeURIComponent(          toLocaleString(
+defaultPrompt(               toString(
+defineProperties             tojson(
+defineProperty               tojsonObject(
+doassert(                    tojsononeline(
+encodeURI(                   tostrictjson(
+encodeURIComponent(          true
+escape(                      undefined
+eval(                        unescape(
+false                        valueOf(
+fileExists(                  waitProgram(
+freeze                       writeFile(
+friendlyEqual(
+> show dbs;
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use PNT;
+switched to db PNT
+> show dbs;
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> show collections;
+> db
+PNT
+> db.students.insert({"studentID": 100,"studentName":"Subhra Roy"})
+WriteResult({ "nInserted" : 1 })
+> show collections;
+students
+> show dbs;
+PNT     0.000GB
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db.students.find()
+{ "_id" : ObjectId("5b904547681dac31cc6f4584"), "studentID" : 100, "studentName" : "Subhra Roy" }
+> exit
+bye
+Subhras-MacBook-Pro:~ subhra$ pwd
+/Users/subhra
+Subhras-MacBook-Pro:~ subhra$ mongo
+MongoDB shell version v4.0.1
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 4.0.1
+Server has startup warnings:
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.175-0400 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server.
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten]
+2018-09-05T16:54:42.176-0400 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> db
+test
+> show db;
+2018-09-06T18:25:37.598-0400 E QUERY    [js] Error: don't know how to show [db] :
+shellHelper.show@src/mongo/shell/utils.js:1055:11
+shellHelper@src/mongo/shell/utils.js:766:15
+@(shellhelp2):1:1
+> show dbs;
+PNT     0.000GB
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+user    0.000GB
+> use user;
+switched to db user
+> show user;
+2018-09-06T18:26:20.595-0400 E QUERY    [js] Error: don't know how to show [user] :
+shellHelper.show@src/mongo/shell/utils.js:1055:11
+shellHelper@src/mongo/shell/utils.js:766:15
+@(shellhelp2):1:1
+> show collections;
+profile
+> db.profile.find()
+{ "_id" : ObjectId("5b904a095597800c948e483d"), "stName" : "Kiran Ismayati", "stID" : "8494", "stDOB" : "07-1996" }
+> use pnt;
+switched to db pnt
+> show collections;
+> use PNT;
+switched to db PNT
+> show collections;
+profile
+students
+> db.students.find()
+{ "_id" : ObjectId("5b904547681dac31cc6f4584"), "studentID" : 100, "studentName" : "Subhra Roy" }
+> use students;
+switched to db students
+> show collections;
+> show dbs;
+PNT       0.000GB
+Students  0.000GB
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+user      0.000GB
+> show user;
+2018-09-06T21:21:54.106-0400 E QUERY    [js] Error: don't know how to show [user] :
+shellHelper.show@src/mongo/shell/utils.js:1055:11
+shellHelper@src/mongo/shell/utils.js:766:15
+@(shellhelp2):1:1
+> db.Students.find()
+> exit
+bye
